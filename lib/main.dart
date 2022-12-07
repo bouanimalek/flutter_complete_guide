@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
+  // Function
   void answerQuestion() {
     print("Answer chosen!");
   }
@@ -28,8 +29,15 @@ class MyApp extends StatelessWidget {
           // ElevatedButton(onPressed: null, child: Text("Answer 2")),
           // ElevatedButton(onPressed: null, child: Text("Answer 3")),
           RaisedButton(child: Text("Answer 1"), onPressed: answerQuestion),
-          RaisedButton(child: Text("Answer 2"), onPressed: answerQuestion),
-          RaisedButton(child: Text("Answer 3"), onPressed: answerQuestion),
+          RaisedButton(
+              child: Text("Answer 2"),
+              onPressed: () => print("Answer 2 chosen!")),
+          RaisedButton(
+              child: Text("Answer 3"),
+              onPressed: () {
+                // some code...
+                print("Answer 3 chosen!");
+              }),
         ]),
       ),
     );
